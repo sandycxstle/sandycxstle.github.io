@@ -14,7 +14,7 @@
 html,body{height:100%}
 body{
   margin:0;
-  background:linear-gradient(180deg,#02afa3 0%, #02afa3 60%);
+  background:linear-gradient(180deg,#02afa3 0%, #f1c305 60%);
   color:var(--text);
   -webkit-font-smoothing:antialiased;
   -moz-osx-font-smoothing:grayscale;
