@@ -14,7 +14,7 @@
 html,body{height:100%}
 body{
   margin:0;
-  background:linear-gradient(180deg,#071027 0%, #071322 60%);
+  background:linear-gradient(180deg,#02afa3 0%, #02afa3 60%);
   color:var(--text);
   -webkit-font-smoothing:antialiased;
   -moz-osx-font-smoothing:grayscale;
@@ -31,11 +31,11 @@ body{
   background:transparent;border:1px solid rgba(255,255,255,0.06);
   color:var(--text);padding:0.45rem 0.7rem;border-radius:8px;text-decoration:none;font-size:0.95rem;
 }
-.nav-btn:hover{background:rgba(96,120,180,0.03)}
+.nav-btn:hover{background:rgba(255,255,255,0.03)}
 
 /* hero */
 .hero{padding:2.2rem 0}
-.about{background:linear-gradient(180deg, rgba(96,120,180,0.02), rgba(96,120,180,0.01));padding:1.6rem;border-radius:var(--radius);border:1px solid rgba(255,255,255,0.03)}
+.about{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:1.6rem;border-radius:var(--radius);border:1px solid rgba(255,255,255,0.03)}
 .about h2{margin-top:0}
 .about p{color:var(--text)}
 .about ul{color:var(--muted);margin-top:0.2rem}
@@ -52,7 +52,7 @@ body{
   color:white;text-decoration:none;font-weight:600
 }
 .cta.alt{background:var(--accent-2)}
-.cta.outline{background:transparent;border:1px solid rgba(96,120,180,0.06);color:var(--text)}
+.cta.outline{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--text)}
 
 /* footer */
 .site-footer{padding:1.2rem 0;color:var(--muted);font-size:0.95rem}
