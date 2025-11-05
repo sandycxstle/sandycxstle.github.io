@@ -4,7 +4,6 @@
   --text: #111827;
   --accent: #0b66ff;
   --btn-active: #0b66ff;
-  --btn-inactive: #2f4f4f;
   --card-bg: #ffffff;
   --radius: 12px;
   --transition-fast: 220ms;
@@ -55,10 +54,10 @@ body.large-text {
 h1 { margin: 0 0 0.5rem 0; font-size: 1.5rem; }
 .lead { margin: 0 0 1rem 0; color: #374151; }
 
-/* Buttons */
-.controls { display: flex; gap: 0.5rem; margin-bottom: 1rem; flex-wrap:wrap; }
+/* Buttons and link-buttons shared styles */
+.controls { display: flex; gap: 0.5rem; margin-bottom: 1rem; flex-wrap:wrap; align-items:center; }
 
-button {
+button, .link-btn {
   --pad-y: 0.5rem;
   --pad-x: 0.8rem;
   background: white;
@@ -71,6 +70,10 @@ button {
   transition: transform var(--transition-fast) ease, background-color var(--transition-fast) ease, box-shadow var(--transition-fast) ease;
   box-shadow: 0 1px 0 rgba(0,0,0,0.03);
   min-width: 155px;
+  text-decoration: none; /* anchors */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* visual active state by aria-pressed (accessible) */
@@ -81,8 +84,16 @@ button[aria-pressed="true"] {
   box-shadow: 0 8px 20px rgba(11,102,255,0.12);
 }
 
+/* hover/focus for link buttons */
+.link-btn:hover, .link-btn:focus {
+  background: linear-gradient(180deg, #f0f6ff, #e6f0ff);
+  border-color: #cfe3ff;
+  outline: none;
+  box-shadow: 0 6px 18px rgba(11,102,255,0.06);
+}
+
 /* focus styles for keyboard users */
-button:focus {
+button:focus, .link-btn:focus {
   outline: 3px solid #ffd54f;
   outline-offset: 3px;
 }
@@ -127,5 +138,4 @@ body.large-text .card {
 
 /* small screens */
 @media (max-width:520px) {
-  button { min-width: 120px; font-size: 0.95rem; }
-}
+  button, .link-btn { min-width: 120px; font-size: 0.95rem; }
