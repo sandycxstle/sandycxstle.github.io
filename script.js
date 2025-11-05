@@ -6,6 +6,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const btnBg = document.getElementById('btn-bg');
   const btnText = document.getElementById('btn-text');
   const btnAnim = document.getElementById('btn-anim');
+  const linkDiscord = document.getElementById('link-discord');
+  const linkReddit = document.getElementById('link-reddit');
   const status = document.getElementById('status');
 
   function updateStatus() {
@@ -21,15 +23,13 @@ document.addEventListener('DOMContentLoaded', () => {
     button.addEventListener('click', () => {
       const active = document.body.classList.toggle(className);
       button.setAttribute('aria-pressed', String(active));
-      // optionally change button text to reflect state
       button.textContent = active ? labelOn : labelOff;
       updateStatus();
     });
 
-    // support keyboard activation (Space/Enter handled by native button, but ensure consistent behaviour)
+    // Prevent double-activation on Space in some browsers.
     button.addEventListener('keydown', (e) => {
       if (e.key === ' ' || e.key === 'Spacebar' || e.key === 'Enter') {
-        // letting the native click happen is fine; this handler prevents double-activation on Space in some browsers
         e.preventDefault();
       }
     });
@@ -45,4 +45,16 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   updateStatus();
+
+  // Optional: update the status line briefly when an external link is activated
+  function attachLinkStatus(el, name) {
+    el.addEventListener('click', () => {
+      // show quick feedback so screen reader users know something happened
+      status.textContent = `Opening ${name}…`;
+      // If you want to track clicks for analytics, do it here (without blocking navigation)
+    });
+  }
+
+  attachLinkStatus(linkDiscord, 'Discord');
+  attachLinkStatus(linkReddit, 'Reddit');
 });
