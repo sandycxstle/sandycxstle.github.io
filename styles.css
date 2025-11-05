@@ -1,0 +1,131 @@
+:root{
+  --bg: #e0e0e0;      /* base gray background */
+  --bg-dark: #9aa0a6; /* darker gray when toggled */
+  --text: #111827;
+  --accent: #0b66ff;
+  --btn-active: #0b66ff;
+  --btn-inactive: #2f4f4f;
+  --card-bg: #ffffff;
+  --radius: 12px;
+  --transition-fast: 220ms;
+  --transition-medium: 420ms;
+}
+
+* { box-sizing: border-box; }
+html,body { height: 100%; }
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.4;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+
+  /* fade-in initial state */
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity var(--transition-medium) ease, transform var(--transition-medium) ease, background-color var(--transition-fast) ease;
+}
+
+/* initial hidden state: page will fade/slide up when JS removes .hidden */
+body.hidden {
+  opacity: 0;
+  transform: translateY(8px);
+}
+
+/* toggled background */
+body.bg-dark {
+  background: var(--bg-dark);
+}
+
+/* toggled larger text */
+body.large-text {
+  font-size: 1.125rem;
+}
+
+/* controls layout */
+.container {
+  max-width: 900px;
+  margin: 3rem auto;
+  padding: 1rem;
+}
+
+h1 { margin: 0 0 0.5rem 0; font-size: 1.5rem; }
+.lead { margin: 0 0 1rem 0; color: #374151; }
+
+/* Buttons */
+.controls { display: flex; gap: 0.5rem; margin-bottom: 1rem; flex-wrap:wrap; }
+
+button {
+  --pad-y: 0.5rem;
+  --pad-x: 0.8rem;
+  background: white;
+  color: var(--text);
+  border: 1px solid #d1d5db;
+  padding: var(--pad-y) var(--pad-x);
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: transform var(--transition-fast) ease, background-color var(--transition-fast) ease, box-shadow var(--transition-fast) ease;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.03);
+  min-width: 155px;
+}
+
+/* visual active state by aria-pressed (accessible) */
+button[aria-pressed="true"] {
+  background: linear-gradient(180deg, var(--btn-active), #0755d6);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(11,102,255,0.12);
+}
+
+/* focus styles for keyboard users */
+button:focus {
+  outline: 3px solid #ffd54f;
+  outline-offset: 3px;
+}
+
+/* demo card */
+.demo { display: grid; gap: 1rem; align-items:start; grid-template-columns: 1fr; }
+.card {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  padding: 1rem;
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.06);
+  transition: transform var(--transition-medium) ease, box-shadow var(--transition-medium) ease, padding var(--transition-fast) ease;
+}
+
+/* motion effect: only present when body has .motion */
+body.motion .card {
+  animation: float 4s ease-in-out infinite;
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.12);
+}
+
+/* larger text increases spacing in card */
+body.large-text .card {
+  padding: 1.5rem;
+}
+
+/* simple float animation */
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-8px) rotate(-0.25deg); }
+  100% { transform: translateY(0); }
+}
+
+/* status line */
+.status {
+  font-size: 0.95rem;
+  color: #374151;
+  padding: 0.5rem 0.25rem;
+}
+
+/* footer */
+.foot { margin-top: 1.25rem; color: #6b7280; }
+
+/* small screens */
+@media (max-width:520px) {
+  button { min-width: 120px; font-size: 0.95rem; }
+}
