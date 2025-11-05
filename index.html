@@ -1,43 +1,37 @@
-<!DOCTYPE html>
-<html class="no-js" lang="en">
-
+<!doctype html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="title" content="SandyCxstle">
-  <meta name="description" content="hi.">
-  <meta name="theme-color" content="f1c305">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="SandyCxstle">
-  <meta property="og:description"
-		content="hi.">
-  <meta property="og:url" content="https://sandycxstle.github.io">
-  <meta property="og:image" content="https://sandycxstle.github.io/redpanda.jpg">
-  <title>SandyCxstle</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Missing People — Community Support</title>
+  <meta name="description" content="Information, resources and ways to help for missing people. Share tips and connect with the community." />
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body class="hidden">
-  <main class="container">
-    <h1>SandyCxstle</h1>
-    <p class="lead">Wait what.</p>
-
-    <div class="controls" role="toolbar" aria-label="Demo toggles">
-      <button id="btn-bg" type="button" aria-pressed="false">?</button>
-      <button id="btn-text" type="button" aria-pressed="false">??</button>
-      <button id="btn-anim" type="button" aria-pressed="false">???</button>
+<body>
+  <header class="site-header">
+    <div class="inner">
+      <h1 class="site-title">Missing People — Community Support</h1>
+      <nav class="top-nav" aria-label="Primary">
+        <a class="nav-btn" href="https://discord.gg/your-invite" target="_blank" rel="noopener noreferrer" aria-label="Open our Discord server (opens in a new tab)">
+          <!-- simple SVG icon -->
+          <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M21 16V8a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v8l4-2 4 2 4-2 4 2z"></path></svg>
+          Discord
+        </a>
+        <a class="nav-btn" href="https://www.reddit.com/r/YourSubreddit" target="_blank" rel="noopener noreferrer" aria-label="Visit our subreddit (opens in a new tab)">
+          <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="3"></circle><path d="M5 12c0 5 7 9 7 9s7-4 7-9"></path></svg>
+          Reddit
+        </a>
+        <a class="nav-btn" href="blog.html" aria-label="Read our blog">
+          Blog
+        </a>
+      </nav>
     </div>
+  </header>
 
-      <a id="link-discord" class="link-btn" href="https://discord.gg/Q88rbfqhqW" target="_blank" rel="noopener noreferrer" aria-label="Open Discord (opens in new tab)">
-        Discord
-      </a>
-      <a id="link-reddit" class="link-btn" href="https://www.reddit.com/user/SandyCxstle/" target="_blank" rel="noopener noreferrer" aria-label="Open Reddit (opens in new tab)">
-        Reddit
-      </a>
-    </div>
-	  
-    <section class="demo">
-      <div class="card" id="card">
-        <p class="warning">
+  <main class="hero" id="main" role="main">
+    <div class="inner">
+      <section class="about">
+                <p class="warning">
   <span style="font-size:30px">
   <strong>MISSING PERSONS</strong>
   </span><br>
@@ -48,11 +42,13 @@
   <br>Please contact L. C. Xie if you have spotted them.
   </span>
   </p>
-      </div>
 
-      <div id="status" class="status" aria-live="polite">??????</div>
-    </section>
-
-  <script src="script.js" defer></script>
-</body>
+        <div class="cta-row">
+          <a class="cta" href="https://discord.gg/your-invite" target="_blank" rel="noopener noreferrer">Join Discord</a>
+          <a class="cta alt" href="https://www.reddit.com/r/YourSubreddit" target="_blank" rel="noopener noreferrer">Visit Reddit</a>
+          <a class="cta outline" href="blog.html">Read the Blog</a>
+        </div>
+      </section>
+    </div>
+  </main>
 </html>
