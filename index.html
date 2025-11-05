@@ -8,220 +8,51 @@
   <meta name="description" content="hi.">
   <meta name="theme-color" content="f1c305">
   <meta property="og:type" content="website">
-	<meta property="og:title" content="SandyCxstle">
-	<meta property="og:description"
+  <meta property="og:title" content="SandyCxstle">
+  <meta property="og:description"
 		content="hi.">
-	<meta property="og:url" content="https://sandycxstle.github.io">
-	<meta property="og:image" content="https://sandycxstle.github.io/redpanda.jpg">
-	<title>SandyCxstle</title>
-	<link href="index.html" rel="stylesheet" type="text/css" media="all">
-<style>
-.starttheriddle {
-	width: 300px;
-	position: relative;
-	display: inline-block;
-	box-shadow: 0 0 30px #FFF;
-}
-
-.starttheriddle .hover {
-	display: none;
-	position: absolute;
-	top: 0;
-	left: 0;
-	z-index: 99;
-}
-
-.starttheriddle:hover .hover {
-	display: inline;
-}
-
-.credits {
-	width: 300px;
-	position: relative;
-	display: inline-block;
-	box-shadow: 0 0 30px #FFF;
-}
-
-.credits .hover {
-	display: none;
-	position: absolute;
-	top: 0;
-	left: 0;
-	z-index: 99;
-}
-
-.credits:hover .hover {
-	display: inline;
-}
-
-.discord {
-	width: 300px;
-	position: relative;
-	display: inline-block;
-	box-shadow: 0 0 30px #FFF;
-}
-
-.discord .hover {
-	display: none;
-	position: absolute;
-	top: 0;
-	left: 0;
-	z-index: 99;
-}
-
-.discord:hover .hover {
-	display: inline;
-}
-
-.nordinho {
-	width: 300px;
-	position: relative;
-	display: inline-block;
-	box-shadow: 0 0 30px #FFF;
-}
-
-.nordinho .hover {
-	display: none;
-	position: absolute;
-	top: 0;
-	left: 0;
-	z-index: 99;
-}
-
-.nordinho:hover .hover {
-	display: inline;
-}
-
-.hof {
-	width: 300px;
-	position: relative;
-	display: inline-block;
-	box-shadow: 0 0 30px #FFF;
-}
-
-.hof .hover {
-	display: none;
-	position: absolute;
-	top: 0;
-	left: 0;
-	z-index: 99;
-}
-
-.hof:hover .hover {
-	display: inline;
-}
-
-.updates {
-	width: 300px;
-	position: relative;
-	display: inline-block;
-	box-shadow: 0 0 30px #FFF;
-}
-
-.updates .hover {
-	display: none;
-	position: absolute;
-	top: 0;
-	left: 0;
-	z-index: 99;
-}
-
-.updates:hover .hover {
-	display: inline;
-}
-
-.warning {
-	animation: warning 1s linear infinite;
-}
-
-@keyframes warning {
-	0% {
-		color: #a00;
-	}
-	50% {
-		color: #f00;
-	}
-	100% {
-		color: #a00;
-	}
-}
-</style>
+  <meta property="og:url" content="https://sandycxstle.github.io">
+  <meta property="og:image" content="https://sandycxstle.github.io/redpanda.jpg">
+  <title>Three Toggles — demo</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
+<body class="hidden">
+  <p class="warning">
+  <span style="font-size:30px">
+  <strong>WARNING:</strong>
+  </span><br>
+  <span style="font-size:25px">
+  Have you seen this missing person?
+  <br>A. J. Rozman <i>(last seen in Calgary, Canada)</i>
+  <br>F. Anderson <i>(last seen in Lansing, USA)</i>
+  <br>Z. W. Sze <i>(last seen in ?????, ?????)</i>
+  <br>Please contact L. C. Xie if you have.
+  </span>
+  </p>
+  <main class="container">
+    <h1>Three toggles — demo</h1>
+    <p class="lead">Background is gray. Use the three toggle buttons below to apply different effects.</p>
 
-<body style="background-color=grey">
-<center>
-<br>
+    <div class="controls" role="toolbar" aria-label="Demo toggles">
+      <button id="btn-bg" type="button" aria-pressed="false">Darken background</button>
+      <button id="btn-text" type="button" aria-pressed="false">Increase text</button>
+      <button id="btn-anim" type="button" aria-pressed="false">Toggle motion</button>
+    </div>
 
-<p style="font-size:25px">
-<span style="font-size:40px">Hello there!</span><br>
-</p>
+    <section class="demo">
+      <div class="card" id="card">
+        <h2>Demo card</h2>
+        <p>This card demonstrates the "Toggle motion" effect and reacts to text-size changes.</p>
+      </div>
 
-<p class="warning">
-<span style="font-size:30px">
-<strong>WARNING:</strong>
-</span><br>
-<span style="font-size:25px">
-Have you seen this missing person?
-<br>A. J. Rozman <i>(last seen in Calgary, Canada)</i>
-<br>F. Anderson <i>(last seen in Lansing, USA)</i>
-<br>Z. W. Sze <i>(last seen in ?????, ?????)</i>
-<br>Please contact L. C. Xie if you have.
-</span>
-</p>
+      <div id="status" class="status" aria-live="polite">No toggles active.</div>
+    </section>
 
-<br>
+    <footer class="foot">
+      <small>Tip: Use Tab and Space/Enter to operate the toggles.</small>
+    </footer>
+  </main>
 
-<div class="">
-<a href="">
-<img src="" width="300">
-<img src="" class="hover" width="300">
-</a>
-</div>
- 
-<div class="">
-<a href="">
-<img src="" width="300">
-<img src="" class="hover" width="300">
-</a>
-</div>
- 
-<div class="">
-<a href="">
-<img src="" width="300">
-<img src="" class="hover" width="300">
-</a>
-</div>
-
-<br>
-
-<div class="">
-<a href="">
-<img src="" width="300">
-<img src="" class="hover" width="300">
-</a>
-</div>
- 
-<div class="">
-<a href="">
-<img src="" width="300">
-<img src="" class="hover" width="300">
-</a>
-</div>
- 
-<div class="">
-<a href="">
-<img src="" width="300">
-<img src="" class="hover" width="300">
-</a>
-</div>
-
-<p style="color:black">
-<span style="font-size:25px">
-Thank you for your help!
-</span>
-</p>
-
-<br><br>
-
+  <script src="script.js" defer></script>
 </body>
 </html>
